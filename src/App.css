@@ -1,0 +1,60 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #150f1e;
+    z-index: 9999999;
+    width: 100%;
+    display: block;
+}
+.logo {
+    margin: 20px;
+    margin-left: 7%;
+    max-width: 12%;
+    max-height: 12%;
+}
+.listContainer{
+    display: block;
+    margin-top: 7%;
+}
+.listUl {
+    width: 65%;
+    margin: 0 auto; /* Центрирование списка */
+    list-style-type: none; /* Удаление маркеров */
+    padding: 0;
+  }
+  .listUl li {
+    border: 3px solid #150f1e;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  .listUl li .button {
+    background-color: none;
+    border: 3px solid #150f1e;
+    padding: 5px 5px;
+    transition: background-color 0.3s;
+    margin-left: auto;
+    width: 20%; /* Измените значение на нужную ширину */
+    height: 90%; /* Измените значение на нужную высоту */
+    border-radius: 5px; 
+    
+  }
+  
+  .listUl li .button:hover {
+    background-color: #150f1e;
+    color: white;
+  }
+
+  .listUl li .button span {
+    font-size: 16px; /* Измените значение на нужный размер шрифта */
+    font-family: Arial, sans-serif; /* Измените значение на нужный шрифт */
+  }
+  .listUl li .button span:hover {
+    color: white;
+  }
+  
