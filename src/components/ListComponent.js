@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import ListService from '../services/ListService'
 
 class ListComponent extends Component {
     constructor(props) {
@@ -11,7 +11,14 @@ class ListComponent extends Component {
     }
 
     viewEmployee(id){
-        this.props.history.push(`api/users/${id}`);
+        this.props.history.push(`/view/${id}`);
+    }
+
+    componentDidMount(){
+        ListService.getEmployees().then((res) => {
+            this.setState({ employees: res.data});
+            console.log(res.status);
+        });
     }
 
     render() {
@@ -21,9 +28,9 @@ class ListComponent extends Component {
                {
                this.state.employees.map(
                                         employee => 
-                <li key={employee.id}> 
-                    <span className='listText'>{employee.name}</span> 
-                    <span className='listText'>{employee.dep}</span> 
+                <li key={employee.userId}> 
+                    <span className='listText'>{employee.userName}</span> 
+                    <span className='listText'>{employee.departmentName}</span> 
                     <button class="button"onClick={ () => this.viewEmployee(employee.id)}> 
                     <span>Подробнее</span>
                     </button>

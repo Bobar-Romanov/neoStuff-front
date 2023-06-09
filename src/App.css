@@ -1,17 +1,24 @@
+body {
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
 .header {
     position: fixed;
     top: 0;
     left: 0;
     background-color: #150f1e;
-    z-index: 9999999;
+    z-index: 990;
     width: 100%;
     display: block;
 }
 .logo {
     margin: 20px;
     margin-left: 7%;
-    max-width: 12%;
-    max-height: 12%;
+    max-width: 10%;
+    max-height: 10%;
 }
 .listContainer{
     display: block;
@@ -51,10 +58,191 @@
   }
 
   .listUl li .button span {
-    font-size: 16px; /* Измените значение на нужный размер шрифта */
+    font-size: 24px; /* Измените значение на нужный размер шрифта */
     font-family: Arial, sans-serif; /* Измените значение на нужный шрифт */
   }
   .listUl li .button span:hover {
     color: white;
   }
+  .viewContainer{
+    display: flex;
+    padding: 0;    
+  }
+  .left-div {
+    flex-grow: 1;
+    width: 60%;
+    background-color: white;
+    height: 100vh; 
+  }
   
+  .right-div {
+    flex-grow: 0;
+    width: 30%;
+    background-color: lightgray;
+    height: 100vh;
+    padding: 10px;
+    margin: 0;
+  }
+  .info{
+    display: block;
+    margin-top: 12%;
+    margin-left: 10px;
+    padding: 10px;
+  }
+  .viewUl{
+    margin: 10% 10px; /* Центрирование списка */
+    list-style-type: none; /* Удаление маркеров */
+    padding: 0;
+  }
+  .viewUl li {
+    border: 3px solid #150f1e;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  .viewUl li .buttons {
+    background-color: none;
+    border: 3px solid #150f1e;
+    padding: 5px 5px;
+    transition: background-color 0.3s;
+    margin-left: auto;
+    margin-right: 10px;    
+    border-radius: 5px; 
+
+  }
+  
+  .viewUl li .buttons:hover {
+    background-color: #150f1e;
+    color: white;
+  }
+
+  .viewUl li .button span {
+    font-size: 24px; /* Измените значение на нужный размер шрифта */
+    font-family: Arial, sans-serif; /* Измените значение на нужный шрифт */
+  }
+  .viewUl li .button span:hover {
+    color: white;
+  }
+  .comment-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    z-index: 9999;
+    border: 3px solid #150f1e;
+    border-radius: 10px;
+    padding: 10px;
+    /* Остальные стили комментария */
+  }
+  
+  .comment-box .buttons {
+    background-color: none;
+    border: 3px solid #150f1e;
+    padding: 5px 5px;
+    transition: background-color 0.3s;
+          
+    border-radius: 5px; 
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .comment-box .buttons:hover {
+    background-color: #150f1e;
+    color: white;
+  }
+
+  .comment-box .button span {
+    font-size: 24px; /* Измените значение на нужный размер шрифта */
+    font-family: Arial, sans-serif; /* Измените значение на нужный шрифт */
+  }
+  .comment-box .button span:hover {
+    color: white;
+  }
+  .comment-actions{
+    display: flex;
+    justify-content: space-between;
+  }
+  .comment-textarea {
+    border: 1px solid #150f1e;
+    height: 100px; /* Установите желаемую высоту */
+  }
+  
+  .edit-window{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    z-index: 9999;
+    border: 3px solid #150f1e;
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .edit-window input{
+   margin: 5px;
+   border-radius: 5px;
+   border: 3px solid #150f1e;
+  }
+  .edit-window .buttons{
+    background-color: none;
+    border: 3px solid #150f1e;
+    padding: 5px 5px;
+    transition: background-color 0.3s;
+    margin: 10px;    
+    border-radius: 5px;
+  }
+  .edit-window .buttons:hover {
+    background-color: #150f1e;
+    color: white;
+  }
+
+  .edit-window .buttons span {
+    font-size: 24px; /* Измените значение на нужный размер шрифта */
+    font-family: Arial, sans-serif; /* Измените значение на нужный шрифт */
+  }
+  .edit-window .buttons span:hover {
+    color: white;
+  }
+  .left-column {
+    display: flex;
+    flex-direction: column;
+  }
+  .add-activity{
+    background-color: gray;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .add-activity * {
+    margin: 5px 0;
+  }
+
+  .buttons{
+    background-color: none;
+    border: 3px solid #150f1e;
+    padding: 5px 5px;
+    transition: background-color 0.3s;      
+    border-radius: 5px;
+  }
+  .buttons:hover {
+    background-color: #150f1e;
+    color: white;
+  }
+
+  .buttons span {
+    font-size: 24px; /* Измените значение на нужный размер шрифта */
+    font-family: Arial, sans-serif; /* Измените значение на нужный шрифт */
+  }
+  .buttons span:hover {
+    color: white;
+  }
+  .text1{
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+  }
